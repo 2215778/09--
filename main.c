@@ -6,18 +6,17 @@
 
 int main(int argc, char *argv[]) {
 	int i;
-	int a[SIZE]={1,2,3,4,5};
-	int b[SIZE]={1,2,3,4,5};
-	int flag_same=1;
+	int grade[SIZE]; 
+	int score[SIZE];
 	
 	for(i=0;i<SIZE;i++)
-	{
-		if(a[i]!=b[i])
-		{
-			printf("배열은 다른 값을 가집니다.");
-			flag_same=0;
-		}
-	}
+	    grade[i]=rand()%100;
+	
+	for(i=0;i<SIZE;i++)
+	    score[i]=grade[i];
+	    
+	for(i=0;i<SIZE;i++)
+	    printf("score[%d]=%d (%d)\n",i,score[i],grade[i]);
 	    
 	return 0;
 }
